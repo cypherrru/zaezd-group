@@ -1,0 +1,118 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+    include pug/_head 
+    body
+        .wrap
+            header.header
+                .header__container
+                    .header__content
+                        a(href="#").header__logo 
+                        nav.header__nav
+                            a(href="#").bold-light Заезды
+                            a(href="#").bold-light Парковки
+                            a(href="#").bold-light Дренаж
+                            a(href="#").bold-light Отмостка
+                            a(href="#").bold-light Фотогалерея
+                        .header__contacts
+                            a(href="tel:+79995219101").header__contacts-item.bold-hard +7 999 521 91 01
+                            .header__contacts-item.bold-hard info@cypherr.ru
+                        button.header__btn.request-btn Обратный звонок
+                        button.header__btn.request-btn
+                            +png('feedback')
+                        .header__burger-menu 
+                            .header__line
+                            .header__line
+                            .header__line
+                            .header__wrap
+                                a(href="#").bold-medium Заезды
+                                a(href="#").bold-medium Парковки
+                                a(href="#").bold-medium Дренаж
+                                a(href="#").bold-medium Отмостка
+                                a(href="#").bold-medium Фотогалерея
+
+            main.main
+                .banner 
+                    .banner__bg
+                        .banner__container 
+                            .banner__content
+                                h1.bold-hard Благоустройство участка
+                                .banner__subtitle.bold-medium Быстро. Качественно. Долговечно.
+                                .banner__benefits
+                                        .banner__benefit
+                                            .banner__benefit-title.bold-medium
+                                                |Быстро и качественно
+                                            .banner__benefit-subtitle
+                                                |Менее чем за 48 часов закончим все работы
+                                        .banner__benefit
+                                            .banner__benefit-title.bold-medium
+                                                |Надежность и опыт
+                                            .banner__benefit-subtitle
+                                                |Мы успели сделать более 1000 заездов и парковок для сотен клиентов, которые остались довольны
+
+                                        .banner__benefit
+                                            .banner__benefit-title.bold-medium
+                                                |Работаем по 12 часов
+                                            .banner__benefit-subtitle
+                                                |График работы с 9:00 до 21:00. Без обеда и выходных
+                                        .banner__benefit
+                                            .banner__benefit-title.bold-medium
+                                                |Дополнительные работы
+                                            .banner__benefit-subtitle
+                                                |В качестве дополнительных услуг представлен широкий спектр косметических и нацеленных на продление срока эксплуатации работ
+                                button.banner__btn Узнать стоимость   
+
+                .calc 
+                    .calc__container
+                        .calc__title.bold-medium 
+                            span.bold-medium Расчёт стоимости 
+                            |работ онлайн.
+                        .calc__content
+                            form.calc__form
+                                .calc__input-block
+                                    .calc__input-title.bold-medium Вид работ
+                                    input(type="text" name="rsquare" value="Заезд" class="calc__field")
+                                    input(type="hidden" name="square" value="Заезд").calc__input
+                                .calc__input-block
+                                    .calc__input-title.bold-medium Тип работ
+                                    .select.bold-medium
+                                        p.select__selected.bold-medium Эконом
+                                        .select__list
+                                            p.select__item.bold-light Эконом
+                                            p.select__item.bold-light Стандарт
+                                            p.select__item.bold-light Оптимальный
+                                            p.select__item.bold-light Премиум
+                                    input(type="hidden" name="workType" value="Эконом").calc__input
+                                .calc__input-block
+                                    .calc__input-title.bold-medium Площадь, м
+                                        span 2
+                                    input(type="text" name="rsquare" value="5" class="calc__field")
+                                    input(type="hidden" name="square" value="5").calc__input
+                                    label.bold-medium *Введите число от 1
+                                .calc__input-block
+                                    .calc__input-title.bold-medium Высота, м
+                                    input(type="text" name="rsquare" value="2" class="calc__field")
+                                    input(type="hidden" name="height" value="2").calc__input
+                                    label.bold-medium *Введите число от 1
+                                input(type="submit").calc__submit
+                            .calc__button-block
+                                button.calc__btn Рассчитать стоимость
+
+            footer.footer
+
+        .popups
+            .popup-callback
+                .popup-callback__content
+                    .popup-callback__close X
+                    .popup-callback__title.bold-medium
+                        span.bold-medium Остались 
+                        |вопросы
+                        span.bold-medium ?
+                    .popup-callback__txt.bold-light Мы с радостью ответим на них и поможем выбрать индивидуальное решение!
+                    form(name="callback").popup-callback__form
+                        input(type="text" name="callback-name" placeholder="Имя*").popup-callback__input
+                        input(type="text" id="phone-number" name="callback-phone" placeholder="Телефон*").popup-callback__input
+                        input(type="submit" value="Отправить").popup-callback__btn
+
+
